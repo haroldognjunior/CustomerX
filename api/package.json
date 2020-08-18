@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/haroldognjunior/Desafio-programa-o---para-vaga-Fullstack---JUNIOR.git"
+    "url": "git+https://github.com/haroldognjunior/CustomerX.git"
   },
   "author": "Junior Nogueira",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/haroldognjunior/Desafio-programa-o---para-vaga-Fullstack---JUNIOR/issues"
+    "url": "https://github.com/haroldognjunior/CustomerX/issues"
   },
-  "homepage": "https://github.com/haroldognjunior/Desafio-programa-o---para-vaga-Fullstack---JUNIOR#readme",
+  "homepage": "https://github.com/haroldognjuniorCustomerX#readme",
   "devDependencies": {
     "nodemon": "^2.0.4"
   },

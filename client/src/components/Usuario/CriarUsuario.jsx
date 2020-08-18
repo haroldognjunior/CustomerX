@@ -67,7 +67,7 @@ const Form = ({ handleSubmit, initialValues }) => {
                   name="password"
                 />
               </div>
-              <div className="form-group col-md-6 inicio">
+              <div className="botoes1">
                 <input
                   type="submit"
                   className="btn btn-outline-dark"

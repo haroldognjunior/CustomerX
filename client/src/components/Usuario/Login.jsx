@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
-import Button from "react-bootstrap/Button";
+import './css/login.css';
 
 export default function LoginForm() {
   const cancelar = function (e) {
@@ -18,37 +18,30 @@ export default function LoginForm() {
         action="http://localhost:3001/auth/login"
         method="POST"
       >
-        <div className="form-group col-md-12" id="contelogin2">
-          <div className="input-group mb-3 id" id="contelogin3">
+        <div id="contelogin2">          
             <input
               name="email"
-              className="form-control"
               placeholder="E-mail"
               required
-            />
-          </div>
+            />         
         </div>
-        <div className="form-group col-md-12 " id="contelogin4">
-          <div className="input-group mb-3" id="contelogin5">
+        <div id="contelogin2">          
             <input
               name="password"
               type="password"
-              className="form-control"
               placeholder="Senha"
               required
-            />
-          </div>         
+            />                 
         </div>
-
-        <div className="form-group col-md-6 inicio">
+        <div className="botoes1">
           <input
             className="btn btn-outline-dark"
             type="submit"
             value="Iniciar Sessão"
           />
-          <Button className="btn btn-outline-light" type="button" onClick={cancelar}>
+          <button className="btn btn-outline-light" type="button" onClick={cancelar}>
             Voltar
-          </Button>
+          </button>
         </div>
       </form>      
     </Container>
