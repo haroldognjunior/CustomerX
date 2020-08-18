@@ -1,0 +1,26 @@
+{
+  "name": "desafio-customerx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haroldognjunior/Desafio-programa-o---para-vaga-Fullstack---JUNIOR.git"
+  },
+  "author": "Junior Nogueira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haroldognjunior/Desafio-programa-o---para-vaga-Fullstack---JUNIOR/issues"
+  },
+  "homepage": "https://github.com/haroldognjunior/Desafio-programa-o---para-vaga-Fullstack---JUNIOR#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
