@@ -41,7 +41,7 @@ useEffect(()=>{
            </span>}           
       </div>}) }
 
-      
+      <div>
       <Link to={'/registrocontato/'+ client.idClient}>
       <input
                   type="submit"
@@ -49,6 +49,7 @@ useEffect(()=>{
                   value="Quer adicionar contatos para este cliente? "
                   />
                 </Link>
+                </div>
                 </div>
       </Container>
   );
