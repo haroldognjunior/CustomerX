@@ -1,5 +1,10 @@
 # Desafio de CustomerX-CX
 
+
+Ao baixar o repositório, rodar npm install nas pastas API e CLIENT, logo após, executar o comando npm start em respectivas pastas.
+
+O banco de dados é chamado de customerx com usuário postgres e senha 123, conforme dados disponíveis  em api/src/db.js e o index.js de api está com o force em false.
+
 Descrição do projeto
 Você deverá criar um cadastro de clientes que poderá conter muitos contatos associados. Depois deste processo deverá ter um relatório em tela, ou PDF que mostre os clientes e os contatos vinculados a este cliente.
 
@@ -25,3 +30,4 @@ Ter uma documentação clara do projeto.
 Apresentar telas bonitas, porém, preferimos o processo funcional e fluido.
 Cobertura de testes.
 Login de acesso.
+

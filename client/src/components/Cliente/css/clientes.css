@@ -1,0 +1,22 @@
+#header {
+    margin-bottom: 100px;
+}
+
+p{
+    margin-bottom: 50px;
+}
+
+#Client {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    align-content: center;margin-top: 50px;
+    color: white;
+    font-size: 24px;
+}
+
+#Client input{
+    display: flex;
+}
+

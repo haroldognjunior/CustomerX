@@ -1,11 +1,6 @@
-import * as yup from "yup";
-import PropTypes from "prop-types";
 import React, {useEffect, useState} from "react";
-import { ErrorMessage, Formik, Form as FormikForm, Field } from "formik";
-import { useDispatch } from "react-redux";
 import { addContact } from "../../actions/contactsActions";
 import { getClientDetails} from '../../actions/clientActions';
-import { getContacts} from '../../actions/contactsActions';
 import Container from "react-bootstrap/esm/Container";
 import Image from "react-bootstrap/Image";
 import { connect } from 'react-redux';
@@ -67,7 +62,8 @@ const handleInputChange = function(e){
                   onChange={handleInputChange}
                   required
                 />
-                
+                </div>
+                <div>
                 <input
                   className="Form-Field"
                   name="email1"

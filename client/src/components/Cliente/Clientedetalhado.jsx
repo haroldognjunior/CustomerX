@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Image from 'react-bootstrap/Image';
 import Container from "react-bootstrap/Container";
 import { Link } from 'react-router-dom';
+import './css/clientedetalhado.css';
 
 
 function Clientedetalhado({id, client, contact, getClientDetails, getContacts}) {
@@ -29,7 +30,7 @@ useEffect(()=>{
       <span>Contatos do Cliente {client.fullName} </span>
       </div>
 
-    
+    <div id="contatosgeral">
     { contact.map(C => {   
           return <div className="contato" key={C.idContact+C.clientIdClient}>
            { <span>Nome do contato: {C.fullName}
@@ -42,9 +43,13 @@ useEffect(()=>{
 
       
       <Link to={'/registrocontato/'+ client.idClient}>
-           <p> Quer adicionar um contato? </p>
+      <input
+                  type="submit"
+                  className="btn btn-outline-dark"
+                  value="Quer adicionar contatos para este cliente? "
+                  />
                 </Link>
-      
+                </div>
       </Container>
   );
 }

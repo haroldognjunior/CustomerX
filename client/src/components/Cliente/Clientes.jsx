@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 import Container from "react-bootstrap/Container";
+import './css/clientes.css';
 
 
 function Clientes({id, Client, getClient}) {
@@ -20,12 +21,17 @@ function Clientes({id, Client, getClient}) {
         id="header"
         src="https://fotos.subefotos.com/97d96c5903bb437b451cff5d3f864f20o.png"
       ></Image>
-     
+     <div>
      <Link to={'/registrocliente/'}>
-           <p> Quer adicionar um cliente? </p>
+                  <input
+                  type="submit"
+                  className="btn btn-outline-dark"
+                  value="Quer adicionar um cliente? "
+                  />
                 </Link>
+     </div>
       {Client.map(C => {
-          return <div className="Client" key={C.idClient}>
+          return <div id="Client" key={C.idClient}>
            <span>Nome Completo do Cliente: {C.fullName} 
            <br /> E-mail Principal: {C.email1}
            <br /> Outro e-mail do Cliente: {C.email2}
@@ -33,7 +39,12 @@ function Clientes({id, Client, getClient}) {
            <br /> Outro Telefone do Cliente: {C.phone2}
            </span>
            <Link to={'/clientes/'+ C.idClient}>
-           <p> Quer ver os contatos deste cliente? </p>
+           <input
+                  type="submit"
+                  className="btn btn-outline-dark"
+                  value="Quer ver os contatos deste cliente? "
+                  />
+         
                 </Link>
            
       </div>})}
