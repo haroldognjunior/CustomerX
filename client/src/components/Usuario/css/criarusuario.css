@@ -11,13 +11,13 @@ h4{
     flex-direction: column;
     align-self: center;
     align-items: center;
-    align-content: center;
+    align-content: center;margin-top: 50px;
+    color: white;
+    font-size: 24px;
 }
 
 #usuario input{
-margin-top: 50px;
-color: white;
-font-size: 24px;
+    display: flex;
 }
 
 #usuario button{

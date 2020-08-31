@@ -11,7 +11,7 @@ export default function Home() {
     window.location.replace("http://localhost:3000/login");
   };
   const registrar = function (e) {
-    window.location.replace("http://localhost:3000/registro");
+    window.location.replace("http://localhost:3000/registrousuario");
   };
 
   return (

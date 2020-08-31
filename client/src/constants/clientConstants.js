@@ -1,0 +1,13 @@
+export const ADD_CLIENT = "ADD_CLIENT";
+export const GET_USER_LOGGED = "GET_USER_LOGGED";
+export const MODIFY_USER = "MODIFY_USER";
+export const GET_CLIENT = "GET_CLIENT";
+export const GET_CONTATOS = "GET_CONTATOS";
+export const LISTA_CONTATOS = "LISTA_CONTATOS";
+export const SELECT_CONTACT = "SELECT_CONTACT";
+export const ADD_CONTACT = "ADD_CONTACT";
+export const GET_USER_CONTACTS = "GET_USER_CONTACTS";
+export const DELETE_CONTACT = "DELETE_CONTACT";
+export const GET_VALID_USER = "GET_VALID_USER";
+export const GET_CLIENT_DETAILS = "GET_CLIENT_DETAILS";
+

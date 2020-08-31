@@ -3,11 +3,15 @@ import PropTypes from "prop-types";
 import React from "react";
 import { ErrorMessage, Formik, Form as FormikForm, Field } from "formik";
 import { useDispatch } from "react-redux";
+import { addUser } from "../../actions/userActions";
 import Container from "react-bootstrap/esm/Container";
 import Image from "react-bootstrap/Image";
 import './css/criarusuario.css';
 
 const validations = yup.object().shape({
+  firstName: yup
+    .string()
+    .required("Digita o seu nome!"),
   email: yup
     .string()
     .required("Digita o seu e-mail!")
@@ -21,7 +25,8 @@ const validations = yup.object().shape({
 const Form = ({ handleSubmit, initialValues }) => {
   const dispatch = useDispatch();
   function handleSubmit(values) {
-    dispatch();
+    dispatch(addUser(values));
+    
   }
   const cancelar = function (e) {
     window.location.replace("http://localhost:3000");
@@ -41,6 +46,19 @@ const Form = ({ handleSubmit, initialValues }) => {
           <FormikForm className="Form">
             <div className="form-group col-md-12">
               <h4>Criar Usuário</h4>
+              <div className="Form-Group">
+                <Field
+                  className="Form-Field"
+                  name="firstName"
+                  placeholder="Nome"
+                  type="text"
+                />
+                <ErrorMessage
+                  name="firstName"
+                  className="Form-Error"
+                  component="span"
+                />
+              </div>
               <div className="Form-Group">
                 <Field
                   className="Form-Field"

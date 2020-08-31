@@ -1,3 +1,48 @@
+#login {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: none !important;
+    border-color: transparent !important;
+    margin-top: 0%;
+    margin-bottom: 0%;
+  }
+
+  #login #customerxlogin {
+    width: 70%;
+    height: 100%;
+    align-self: center;
+    margin-top: 0% !important;
+    margin-bottom: 50px;
+  }
+
+  #login #formlogin {
+    width: 100%;
+    background-color: linear-gradient(rgb(112, 112, 112), rgb(61, 61, 61));
+    border-radius: 15px;
+    align-self: center;
+    margin-top: 20 px;
+    background-color: transparent;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 100% !important;
+    height: 100%;
+    background: transparent;
+  }
+  /* Container 2 Login */
+  #login #contelogin2 {
+    width: 70% !important;
+    padding-bottom: 4px;
+    padding-top: 4px !important;
+    background-color: black;
+    align-self: center;
+  }
+
 .botoes1{
     display: flex;
     flex-direction: column;
