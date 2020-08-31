@@ -111,7 +111,7 @@ const Form = ({ handleSubmit, initialValues }) => {
                 <input
                   type="submit"
                   className="btn btn-outline-dark"
-                  value="Criar Usuário"
+                  value="Adicionar Cliente"
                 />
                 <button
                   type="button"

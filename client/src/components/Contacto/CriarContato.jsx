@@ -37,9 +37,7 @@ const handleInputChange = function(e){
 }
   
   const handleSubmit = function(e){
-    e.preventDefault();
-    console.log(input, "esto es el input")
-    console.log(clienteSelecionado.idClient, "esto es el client")
+    e.preventDefault();    
     addContact(input, id, clienteSelecionado.idClient) ;     
 }
 
@@ -67,6 +65,7 @@ const handleInputChange = function(e){
                   placeholder="Nome Completo do Contato"
                   type="text"
                   onChange={handleInputChange}
+                  required
                 />
                 
                 <input
@@ -75,6 +74,7 @@ const handleInputChange = function(e){
                   placeholder="E-mail do Contato"
                   type="email"
                   onChange={handleInputChange}
+                  required
                 />
                 
               </div>
@@ -94,6 +94,7 @@ const handleInputChange = function(e){
                   placeholder="Telefone do Contato"
                   type="tel"
                   onChange={handleInputChange}
+                  required
                 />
                 
               </div>

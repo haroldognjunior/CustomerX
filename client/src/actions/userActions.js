@@ -1,10 +1,7 @@
 import {
   ADD_USER,
   GET_PROFILE,
-  MODIFY_USER,
-  LOGGIN,
-  LOGOUT,
- 
+  MODIFY_USER, 
 } from "../constants/userConstants";
 import axios from "axios";
 import swal from "sweetalert2";
@@ -50,37 +47,7 @@ export function getProfile() {
   };
 }
 
-
-
-
-
-export function logout() {
-  return function (dispatch) {
-    axios
-      .get("http://localhost:3001/auth/logout")
-      .then(async (value) => {
-        await swal.fire({
-          title: "¡Nos vemos pronto!",
-          text: "Se ha deslogueado satisfactoriamente",
-          icon: "success",
-        });
-        dispatch({ type: LOGOUT }) &&
-          window.location.replace("http://localhost:3000/");
-      })
-      .catch(async (error) => {
-        await swal.fire({
-          title: "¡Qué mal!",
-          text: "No se pudo desloguear",
-          icon: "error",
-        });
-      });
-  };
-}
-
-
-
-  
-  export function getUpdateProfile(address, id, user) {
+  export function getUpdateProfile( id, user) {
     return function (dispatch) {
 
             axios
@@ -90,8 +57,8 @@ export function logout() {
                   dispatch({ type: MODIFY_USER, payload: res.data });
                   swal
                     .fire({
-                      title: "¡Buen trabajo!",
-                      text: "Tus datos fueron modificados correctamente",
+                      title: "Excelente",
+                      text: "Dados modificados com sucesso",
                       icon: "success",
                     })
                     .then((value) => {
@@ -104,7 +71,7 @@ export function logout() {
         .catch((error) => {
           swal.fire({
             title: "¡Qué mal!",
-            text: "La dirección ingresada no es válida",
+            text: "endereco errado",
             icon: "error",
           });
         });
@@ -117,20 +84,20 @@ export function logout() {
       email: usuario.email,
       password: usuario.password
     }, { withCredentials: true })
-    .then((res)=>{
+    .then((res)=>{    
       const user = res.data;
 
       if (user) {
-        swal.fire("Éxito", 'Bienvenido ' + user.firstName, 'success');
+        swal.fire("Sucesso", 'Bem-vindo ' + user.firstName, 'success');
         setUsuario({
-          redirectTo: '/cliente'
+          redirectTo: '/clientes'
         })
       }
       else{
-        swal.fire('Error', "Usuario y/o contraseña incorrectos. Intente nuevamente", 'error');
+        swal.fire('Error', "Usuário ou senha incorretos. Tente novamente", 'error');
       }
     })
     .catch(e=>{
-      swal.fire('Error', "Ha ocurrido un error al iniciar sesión. Intente nuevamente", 'error');
+      swal.fire('Error', "Ocorreu um erro. Tente novamente", 'error');
     })
   }

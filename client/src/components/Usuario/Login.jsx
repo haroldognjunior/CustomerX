@@ -21,10 +21,10 @@ export default function LoginForm() {
       if (usuario.password){
         LoginUser(usuario, setUsuario)
       }else{
-        swal.fire('Error', 'Por favor, ingrese su contraseña', 'error')
+        swal.fire('Error', 'Por favor, digite sua senha', 'error')
       }
     }else{
-      swal.fire('Error', 'Por favor, ingrese su correo', 'error')
+      swal.fire('Error', 'Por favor, digite o seu e-mail', 'error')
     }
   };
 

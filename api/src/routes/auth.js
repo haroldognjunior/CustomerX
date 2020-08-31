@@ -1,15 +1,14 @@
 const server = require("express").Router();
 const passport = require("passport");
 const { Users } = require("../models/index.js");
-const bcrypt = require("bcrypt");
+
 
 server.post("/changepassword");
 
 //fazer login
 server.post('/login',
     passport.authenticate('local'),
-    function(req, res) {
-
+    function(req, res) {     
         res.json(req.user)
 
     }

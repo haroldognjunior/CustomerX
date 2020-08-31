@@ -15,10 +15,10 @@ module.exports = function(passport) {
             })
             .then((user) => {
                 if (user === null) {
-                    return done(null, false, { message: "El usuario no existe" })
+                    return done(null, false, { message: "O usuário nao existe" })
                 }
                 if (user.password !== password) {
-                    return done(null, false, { message: "Contraseña incorrecta" })
+                    return done(null, false, { message: "Senha incorreta" })
                 }
                 return done(null, user);
             })
@@ -29,11 +29,11 @@ module.exports = function(passport) {
 ));
 
 passport.serializeUser(function(user, done) {
-    done(null, user.id);
+    done(null, user.idUser);
 });
 
-passport.deserializeUser(function(id, done) {
-    Users.findByPk(id)
+passport.deserializeUser(function(idUser, done) {
+    Users.findByPk(idUser)
         .then(user => {
             done(null, user)
 

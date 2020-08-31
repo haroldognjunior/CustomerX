@@ -46,9 +46,9 @@ export function addContact(input, idClient) {
         if (res.status === 200) {
           swal
             .fire({
-              title: "Contato adicionado!",
+              title: "Excelente!",
               text:
-                idClient.email1 ,
+                "Contato adicionado corretamente!" ,
               icon: "success",
             })
             .then((value) => {
@@ -60,7 +60,7 @@ export function addContact(input, idClient) {
       .catch(() => {
         swal.fire({
           title: "ops!",
-          text: "Dá erro com " + idClient.clientIdClient + " =(",
+          text: "Houve um erro, tente novamente =(",
           icon: "error",
         });
       });

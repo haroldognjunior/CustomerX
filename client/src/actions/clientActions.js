@@ -16,21 +16,21 @@ export function addClient(user) {
         if (res.status === 200) {
           swal
             .fire({
-              title: "¡Registro realizado!",
+              title: "Excelente!",
               text:
-                "Se ha enviado un email de validación a " + user.email + " =)",
+                "O cliente foi incluído com sucesso =)",
               icon: "success",
             })
             .then((value) => {
               dispatch({ type: ADD_CLIENT }) &&
-                window.location.replace("http://localhost:3000/cliente");
+                window.location.replace("http://localhost:3000/clientes");
             });
         }
       })
       .catch(() => {
         swal.fire({
-          title: "¡Qué mal!",
-          text: "E-mail " + user.email + " ya está en uso",
+          title: "Ops",
+          text: "Cliente já registrado",
           icon: "error",
         });
       });
@@ -64,28 +64,6 @@ export function getClientSelected(idClient) {
 
 
 
-  export function listaContatos(idContact) {
-    return function (dispatch) {
-      axios.get(`http://localhost:3001/users/${idContact}`).then((res) => {
-        if (res.status === 200) {
-          return dispatch({
-            type: LISTA_CONTATOS,
-            payload: {
-              nombreContacto: res.data.firstName + " " + res.data.lastName,
-              idContacto: res.data.id,
-            },
-          });
-        }
-      })
-      .catch((error) => {
-        swal.fire({
-          title: "¡Qué mal!",
-          text: "No tienes fondos suficientes",
-          icon: "error",
-        });
-      });
-    };
-  }
 
   
   export function getUpdateProfile(address, id, user) {
@@ -131,9 +109,7 @@ export function getClientSelected(idClient) {
         if (res.status === 200) {
           return dispatch({
             type: GET_CLIENT_DETAILS,
-            payload: {
-              idClient: res.data.idClient,
-            },
+            payload: res.data,
           });
         }
       })

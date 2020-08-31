@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import { getClientDetails, getClientSelected} from '../../actions/clientActions';
+import { getClientDetails} from '../../actions/clientActions';
 import { getContacts} from '../../actions/contactsActions';
 import { connect } from 'react-redux';
 import Image from 'react-bootstrap/Image';
@@ -11,7 +11,7 @@ function Clientedetalhado({id, client, contact, getClientDetails, getContacts}) 
    
   useEffect(()=>{
     getClientDetails(id)     
- },[id, getClientDetails])
+ },[])
 
  
 
@@ -25,12 +25,11 @@ useEffect(()=>{
         id="header"
         src="https://fotos.subefotos.com/97d96c5903bb437b451cff5d3f864f20o.png"
       ></Image>
-      { client.map(cl => {   
-          return <div className="cliente" key={cl.clientIdClient}>
-           { <span>Contatos do Cliente  {cl.fullName}
-           
-           </span>}           
-      </div>}) }
+      <div>
+      <span>Contatos do Cliente {client.fullName} </span>
+      </div>
+
+    
     { contact.map(C => {   
           return <div className="contato" key={C.idContact+C.clientIdClient}>
            { <span>Nome do contato: {C.fullName}
@@ -41,12 +40,10 @@ useEffect(()=>{
            </span>}           
       </div>}) }
 
-      { client.map(d => {   
-          return <div className="cliente" key={d.clientIdClient}>
-           { <Link to={'/registrocontato/'+ d.idClient}>
+      
+      <Link to={'/registrocontato/'+ client.idClient}>
            <p> Quer adicionar um contato? </p>
-                </Link>}           
-      </div>}) }
+                </Link>
       
       </Container>
   );
@@ -54,7 +51,7 @@ useEffect(()=>{
 
 function mapStateToProps(state){
     return{
-        client : state.usuario.client,
+        client : state.usuario.clienteSelecionado,
         contact : state.usuario.contacts
         
     }

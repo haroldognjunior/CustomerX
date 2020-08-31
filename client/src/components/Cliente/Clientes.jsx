@@ -21,7 +21,9 @@ function Clientes({id, Client, getClient}) {
         src="https://fotos.subefotos.com/97d96c5903bb437b451cff5d3f864f20o.png"
       ></Image>
      
-
+     <Link to={'/registrocliente/'}>
+           <p> Quer adicionar um cliente? </p>
+                </Link>
       {Client.map(C => {
           return <div className="Client" key={C.idClient}>
            <span>Nome Completo do Cliente: {C.fullName} 

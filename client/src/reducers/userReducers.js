@@ -9,8 +9,6 @@ import {
 
 import {
 GET_USER_CONTACTS,
-SELECT_CONTACT,
-LISTA_CONTATOS,
 GET_CLIENT,
 GET_CLIENT_DETAILS
 } from "../constants/clientConstants";
@@ -19,8 +17,7 @@ const initialState = {
   usuarios: [],
   usuarioConectado: {},
   client:[],
-  clienteSelecionado: {},
-  listContact: [],
+  clienteSelecionado: {}, 
   contacts: [],
   
 };
@@ -63,13 +60,7 @@ export default function usuario(state = initialState, action) {
         usuarioConectado: {}
       };
 
-    case LISTA_CONTATOS:
-    return {
-        ...state,
-        listContact: state.listContact.concat(action.payload),
-      };
-
-      
+       
     case GET_USER_CONTACTS:
       return {
         ...state,
